@@ -1,0 +1,9 @@
+####################################
+# Custom configuration file (CSharp) #
+####################################
+
+disable-default-queries: true  # disable all default queries, because we are going to override one of them
+queries:
+  # we use our own query pack, based on the original one,
+  # but with a query replaced by a customized one
+  - uses: ./.github/custom-csharp-query-pack/suite.qls

@@ -1,0 +1,11 @@
+- import: codeql-suites/csharp-code-scanning.qls
+  from: codeql-csharp         # our query pack is based on the original one
+- exclude:
+    query filename:
+    - SqlInjection.ql                # we exclude the default XSS query...
+- query: custom-sql-inject.ql      # ..and replace it with our customized one
+
+# See https://help.semmle.com/codeql/codeql-cli/procedures/query-suites.html
+# for documentation on query suites
+# See https://codeql.github.com/docs/codeql-cli/about-ql-packs/
+# for documentation on query packs
